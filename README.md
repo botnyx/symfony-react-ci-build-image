@@ -1,0 +1,1 @@
+# symfony-react-ci-build-image
