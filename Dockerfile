@@ -4,9 +4,9 @@ MAINTAINER JH <hopper.jerry@gmail.com>
 
 ENV WORKDIR "/var/www/app" 
 
-RUN wget https://raw.githubusercontent.com/fabianonline/telegram.sh/master/telegram
-RUN chmod +x ./telegram
-ADD ./telegram /bin/telegram
+RUN wget https://raw.githubusercontent.com/fabianonline/telegram.sh/master/telegram /tmp/telegram
+RUN chmod +x /tmp/telegram
+ADD /tmp/telegram /bin/telegram
 
 RUN apk upgrade --update && apk --no-cache add \
     git autoconf tzdata openntpd libcurl curl-dev coreutils \
