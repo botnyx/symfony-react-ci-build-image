@@ -4,7 +4,7 @@ MAINTAINER JH <hopper.jerry@gmail.com>
 
 ENV WORKDIR "/var/www/app" 
 
-RUN wget https://raw.githubusercontent.com/fabianonline/telegram.sh/master/telegram -o ./telegram
+RUN wget https://raw.githubusercontent.com/fabianonline/telegram.sh/master/telegram -O ./telegram
 RUN chmod +x ./telegram
 COPY ./telegram /usr/bin/telegram
 
