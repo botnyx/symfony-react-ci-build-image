@@ -6,7 +6,7 @@ ENV WORKDIR "/var/www/app"
 
 RUN wget https://raw.githubusercontent.com/fabianonline/telegram.sh/master/telegram /tmp/telegram
 RUN chmod +x /tmp/telegram
-ADD /tmp/telegram /bin/telegram
+ADD /bin/telegram /tmp/telegram
 
 RUN apk upgrade --update && apk --no-cache add \
     git autoconf tzdata openntpd libcurl curl-dev coreutils \
