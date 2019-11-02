@@ -17,6 +17,7 @@ RUN apk upgrade --update && apk --no-cache add \
     libpng-dev libressl-dev libxml2-dev postgresql-dev icu-dev \
     nodejs npm yarn sshpass openssh-client
 
+RUN apk add --no-cache --upgrade bash
 RUN apk add --no-cache --virtual build-dependencies libxpm-dev libmcrypt-dev gmp-dev curl-dev postgresql-dev icu-dev libxml2-dev freetype-dev libpng-dev libjpeg-turbo-dev g++ make autoconf 
 
 
